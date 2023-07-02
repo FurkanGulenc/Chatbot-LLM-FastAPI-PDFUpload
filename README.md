@@ -1,6 +1,5 @@
-Tamamlamanız istenen case in gene mimari çizimi ektedir. Detayları aşağıdaki gibi olacaktır;
 
-1. Fast Api ile kullanarak bir API projesi hazırlamanız gerekmektedir. İki adet endpoint e sahip olması yeterlidir. Bu endpointler postman ile denenecektir. Bu api projesine gerekli dockerfile ve docker-compose dosyalarını ekleyip “docker-compose up --build” komutu ile ayağa kaldırılabiliyor olmak ek puan kazandıracaktır.
+1. Fast Api ile kullanarak bir API projesi hazırlamanız gerekmektedir. İki adet endpoint e sahip olması yeterlidir. Bu endpointler postman ile denenecektir.
 
 2) Endpointlerden biri multipart/form-data kabul edecektir. Bir “pdf” dosya upload edilecektir.
 
@@ -21,6 +20,5 @@ Not 3: Langchain kütüphanesinde, “Documen Loader”, “VectorStores”, “
 
 Not 4: Open AI ı api olarak kullanmanız için aşağıdaki OPEN_AI_API_KEY i kullanabilirsiniz. Bu key Haftaya Pazartesi dispose olacaktır.
 
-“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”
 
 Başka bir sorunuz olduğunda bizimle iletişime geçebilirsiniz.
