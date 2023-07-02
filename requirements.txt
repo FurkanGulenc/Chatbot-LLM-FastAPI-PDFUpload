@@ -1,0 +1,9 @@
+langchain
+fastapi
+chromadb
+panel
+pypdf
+openai
+tiktoken
+python-multipart
+pydantic
