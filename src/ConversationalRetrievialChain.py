@@ -20,19 +20,25 @@ class VectorStore:
 
 vector_store = VectorStore()
 
+# For remember chat history
 memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
 
 
+# Process the pdf 
 def split_pdf_add_db(file) -> Chroma:
     global vectorstore
 
+    # Load PDF as documents
     loader = PyPDFLoader(file)
     documents = loader.load()
 
+    # splits the document each piece take 1000 characters
     text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
     documents = text_splitter.split_documents(documents)
 
+    # For measure the relatedness of text strings
     embeddings = OpenAIEmbeddings()
+    # Embed data base
     vectorstore = Chroma.from_documents(documents, embeddings)
 
     vector_store.vectorstore = vectorstore
@@ -40,7 +46,8 @@ def split_pdf_add_db(file) -> Chroma:
     return vectorstore
 
 
-def answer_question(query):
+def answer_question(query): # Process and Answer Question
+    # similarity search from chromadb, ask openai,
     qa = ConversationalRetrievalChain.from_llm(
         OpenAI(temperature=0), vectorstore.as_retriever(), memory=memory
     )
