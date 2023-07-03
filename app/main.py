@@ -28,9 +28,9 @@ async def upload_pdf(file: UploadFile = File(...)):
     ConversationalRetrievialChain.vector_store.vectorstore = (
         ConversationalRetrievialChain.split_pdf_add_db(save_path)
     )
-    print("-----------")
+    
     print(ConversationalRetrievialChain.vector_store.vectorstore)
-    print("-----------")
+    
     return {"message": "PDF uploaded successfully."}
 
 
