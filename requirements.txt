@@ -7,3 +7,5 @@ openai
 tiktoken
 python-multipart
 pydantic
+uvicorn["standart"]
+python-multipart
